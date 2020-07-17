@@ -4,7 +4,6 @@
 //tinyFriend
 
 
-
 /**************************************************************** 
                         No. of Assignment-1
 ******************************************************************/
@@ -21,33 +20,37 @@ var resultMile = feetToMile(feet);
 //console.log(resultMile);
 
 
+
 /**************************************************************** 
-                        No. of Assignment-4
+                        No. of Assignment-2
 ******************************************************************/
-//tinyFriend
+//woodCalculator
 
-function tinyFriend(friendsName) {
+function woodCalculator(chairQty, tableQty, bedQty) {
 
-    var nameWordCount = friendsName[0].length;
-    var smallFriendName = [];
-    for (var i = 0; i < friendsName.length; i++) {
+    getAbsoluteChair = Math.abs(chairQty);  // Get Absolute Value of Chair Quantity
+    getAbsoluteTable = Math.abs(tableQty);  // Get Absolute Value of Table Quantity
+    getAbsoluteBed   = Math.abs(bedQty);      // Get Absolute Value of Bed Quantity
 
-        element = friendsName[i].length;
-        if (element < nameWordCount) {
-            nameWordCount = element;
-            smallFriendName = friendsName[i];
-        }
+    const oneChair = 1;
+    const oneTable = 3;
+    const oneBed   = 5;
 
-    }
-    return smallFriendName;
+    woodNeedForChair = oneChair * getAbsoluteChair;
+    woodNeedForTable = oneTable * getAbsoluteTable;
+    woodNeedForBed   = oneBed * getAbsoluteBed;
 
+    totalWoodNeed = woodNeedForChair + woodNeedForTable + woodNeedForBed;
+    return totalWoodNeed;
 }
 
+var chair = 5;
+var table = 5;
+var bed = 5;
 
-var name = ["Karim", "Rahim", "Kawsar Ahmed", "Abc", "Mohammad", "Shamim", "Ajel", "Def"];
-var getSmallName = tinyFriend(name);
+var getResult = woodCalculator(chair, table, bed);
+//console.log(getResult);
 
-//console.log(getSmallName);
 
 
 /**************************************************************** 
@@ -94,38 +97,29 @@ getResult = brickCalculator(floor);
 
 
 /**************************************************************** 
-                        No. of Assignment-2
+                        No. of Assignment-4
 ******************************************************************/
-//woodCalculator
+//tinyFriend
 
-function woodCalculator(chairQty, tableQty, bedQty) {
+function tinyFriend(friendsName) {
 
-    getAbsoluteChair = Math.abs(chairQty);  // Get Absolute Value of Chair Quantity
-    getAbsoluteTable = Math.abs(tableQty);  // Get Absolute Value of Table Quantity
-    getAbsoluteBed   = Math.abs(bedQty);      // Get Absolute Value of Bed Quantity
+    var nameWordCount = friendsName[0].length;
+    var smallFriendName = [];
+    for (var i = 0; i < friendsName.length; i++) {
 
-    const oneChair = 1;
-    const oneTable = 3;
-    const oneBed   = 5;
+        element = friendsName[i].length;
+        if (element < nameWordCount) {
+            nameWordCount = element;
+            smallFriendName = friendsName[i];
+        }
 
-    woodNeedForChair = oneChair * getAbsoluteChair;
-    woodNeedForTable = oneTable * getAbsoluteTable;
-    woodNeedForBed   = oneBed * getAbsoluteBed;
+    }
+    return smallFriendName;
 
-    totalWoodNeed = woodNeedForChair + woodNeedForTable + woodNeedForBed;
-    return totalWoodNeed;
 }
 
-var chair = 5;
-var table = 5;
-var bed = 5;
+var name = ["Karim", "Rahim", "Kawsar Ahmed", "Abc", "Mohammad", "Shamim", "Ajel", "Def"];
+var getSmallName = tinyFriend(name);
 
-var getResult = woodCalculator(chair, table, bed);
-console.log(getResult);
-
-
-
-
-
-
+//console.log(getSmallName);
 
