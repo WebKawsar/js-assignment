@@ -10,14 +10,18 @@
 //feetToMile
 
 function feetToMile(feet) {
-    getAbsoluteFeet = Math.abs(feet); // Get Absolute Value of Feet
-    mile = getAbsoluteFeet / 5280;
-    return mile;
+
+    const getAbsoluteFeet = Math.abs(feet); // Get Absolute Value of Feet
+    const mile = getAbsoluteFeet / 5280;
+    const getFixedMile = mile.toFixed(2);   // unfinite number fixed
+
+    return getFixedMile;
+
 }
 
-var feet = 142560;
-var resultMile = feetToMile(feet);
-//console.log(resultMile);
+let feet = 1042560;
+let getMile = feetToMile(feet);
+console.log(getMile);
 
 
 
@@ -28,28 +32,29 @@ var resultMile = feetToMile(feet);
 
 function woodCalculator(chairQty, tableQty, bedQty) {
 
-    getAbsoluteChair = Math.abs(chairQty);  // Get Absolute Value of Chair Quantity
-    getAbsoluteTable = Math.abs(tableQty);  // Get Absolute Value of Table Quantity
-    getAbsoluteBed   = Math.abs(bedQty);      // Get Absolute Value of Bed Quantity
+    const getAbsoluteChair = Math.abs(chairQty);  // Get Absolute Value of Chair Quantity
+    const getAbsoluteTable = Math.abs(tableQty);  // Get Absolute Value of Table Quantity
+    const getAbsoluteBed   = Math.abs(bedQty);    // Get Absolute Value of Bed Quantity
 
-    const oneChair = 1;
-    const oneTable = 3;
+    const oneChair = 1;  // Here value fixed by Assignment Condition
+    const oneTable = 3;  
     const oneBed   = 5;
 
-    woodNeedForChair = oneChair * getAbsoluteChair;
-    woodNeedForTable = oneTable * getAbsoluteTable;
-    woodNeedForBed   = oneBed * getAbsoluteBed;
+    const woodNeedForChair = oneChair * getAbsoluteChair;
+    const woodNeedForTable = oneTable * getAbsoluteTable;
+    const woodNeedForBed   = oneBed * getAbsoluteBed;
 
-    totalWoodNeed = woodNeedForChair + woodNeedForTable + woodNeedForBed;
+    const totalWoodNeed = woodNeedForChair + woodNeedForTable + woodNeedForBed;
     return totalWoodNeed;
+
 }
 
-var chair = 5;
-var table = 5;
-var bed = 5;
+let chair = 50;
+let table = 40;
+let bed = 100;
 
-var getResult = woodCalculator(chair, table, bed);
-//console.log(getResult);
+let getQunatity = woodCalculator(chair, table, bed);
+console.log(getQunatity);
 
 
 
@@ -60,28 +65,28 @@ var getResult = woodCalculator(chair, table, bed);
 
 function brickCalculator(floorNo) {
 
-    const heightOneFeet = 1000;
-    const fiftinFeetHeight = heightOneFeet * 15;
-    const twelveFeetHeight = heightOneFeet * 12;
-    const tenFeetHeight = heightOneFeet * 10;
+    const bricksNeedOneFeet = 1000;
+    const fifteenFeetHeight = bricksNeedOneFeet * 15;
+    const twelveFeetHeight = bricksNeedOneFeet * 12;
+    const tenFeetHeight = bricksNeedOneFeet * 10;
 
     if (floorNo <= 10) {
 
-        bricksAreNeed = fiftinFeetHeight * floorNo;
+        bricksAreNeed = fifteenFeetHeight * floorNo;
     }
     else if (10 < floorNo && floorNo <= 20) {
 
-        bricksNeedTenFloor = (fiftinFeetHeight * 10);
-        bricksNeedAdditional = (floorNo - 10) * twelveFeetHeight;
+        const bricksNeedTenFloor = (fifteenFeetHeight * 10);
+        const bricksNeedAdditional = (floorNo - 10) * twelveFeetHeight;
         bricksAreNeed = bricksNeedTenFloor + bricksNeedAdditional;
 
     }
     else if (floorNo > 20) {
 
-        bricksNeedTenFloor = (fiftinFeetHeight * 10);
-        bricksNeedTwentyFloor = (twelveFeetHeight * 10);
-        bricksNeedAdditional = (floorNo - 20) * tenFeetHeight;
-        bricksAreNeed = bricksNeedTenFloor + bricksNeedTwentyFloor + bricksNeedAdditional;
+        const bricksNeedTenFloor = (fifteenFeetHeight * 10);
+        const bricksNeedSecondTenFloor = (twelveFeetHeight * 10);
+        const bricksNeedAdditional = (floorNo - 20) * tenFeetHeight;
+        bricksAreNeed = bricksNeedTenFloor + bricksNeedSecondTenFloor + bricksNeedAdditional;
 
     }
 
@@ -89,10 +94,10 @@ function brickCalculator(floorNo) {
 
 }
 
-var floor = 32;
+let floor = 30;
 
-getResult = brickCalculator(floor);
-//console.log(getResult);
+let getResult = brickCalculator(floor);
+console.log(getResult);
 
 
 
@@ -118,8 +123,8 @@ function tinyFriend(friendsName) {
 
 }
 
-var name = ["Karim", "Rahim", "Kawsar Ahmed", "Abc", "Mohammad", "Shamim", "Ajel", "Def"];
-var getSmallName = tinyFriend(name);
+let name = ["Karim", "Rahim", "Kawsar Ahmed", "Abc", "Mohammad", "Shamim", "Ajel", "Def"];
+let getSmallName = tinyFriend(name);
 
-//console.log(getSmallName);
+console.log(getSmallName);
 
